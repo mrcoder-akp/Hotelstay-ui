@@ -6,7 +6,7 @@ const getApiUrl = () => {
     return import.meta.env.VITE_API_URL;
   }
   // Fallback to localhost
-  return 'http://localhost:5000';
+  return 'https://hotelstay-ov1p.onrender.com';
 };
 
 const baseUrl = getApiUrl();
