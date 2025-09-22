@@ -23,7 +23,7 @@ const BookingDetailPage = () => {
     if (id) {
       fetchBookingDetails();
     } else {
-      // Redirect to bookings page if no ID
+      
       navigate('/bookings');
     }
   }, [id]);
@@ -39,27 +39,27 @@ const BookingDetailPage = () => {
         return;
       }
 
-      // Fetch real booking details
+      
       const bookingResponse = await axios.get(
         buildApiUrl(`/bookings/${id}`),
         { headers: getAuthHeader() }
       );
 
-      // Handle both response formats - with or without success wrapper
+      
       const bookingData = bookingResponse.data.data || bookingResponse.data;
 
-      // Transform totalAmount to number if it's a string
+      
       if (bookingData.totalAmount && typeof bookingData.totalAmount === 'string') {
         bookingData.totalAmount = parseFloat(bookingData.totalAmount);
       }
 
       setBooking(bookingData);
 
-      // Hotel data is already included in booking response
+     
       if (bookingData.hotel) {
         setHotel(bookingData.hotel);
       } else if (bookingData.hotelId) {
-          // Fetch hotel details if not included
+        
           try {
             const hotelResponse = await axios.get(
               buildApiUrl(`/hotels/${bookingData.hotelId}`)

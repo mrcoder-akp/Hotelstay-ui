@@ -55,7 +55,7 @@ const RegisterPage = () => {
       [name]: value
     }));
 
-    // Calculate password strength
+   
     if (name === 'password') {
       let strength = 0;
       if (value.length >= 8) strength++;

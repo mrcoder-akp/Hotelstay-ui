@@ -45,7 +45,7 @@ const CheckoutPage = () => {
   }, [user, items, navigate, paymentSuccess]);
 
   const calculateTotal = () => {
-    // Handle both quantity and nights for backward compatibility
+   
     const subtotal = items.reduce((total, item) => {
       const nights = item.quantity || item.nights || 1;
       const price = item.totalPrice || (item.price * nights);
@@ -112,9 +112,9 @@ const CheckoutPage = () => {
         return;
       }
 
-      // Prepare cart items for checkout - handle MongoDB _id field
+    
       const cartItemIds = items.map(item => {
-        // MongoDB items will have _id, otherwise use id
+     
         return item._id || item.id || null;
       }).filter(id => id !== null);
 
@@ -162,7 +162,7 @@ const CheckoutPage = () => {
       console.log('REQUEST BODY BEING SENT:', requestBody);
       console.log('VERIFY totalAmount includes GST:', requestBody.totalAmount);
 
-      // Call backend to create Razorpay order
+      
       const response = await fetch(buildApiUrl('/payment/checkout'), {
         method: 'POST',
         headers: {
@@ -192,10 +192,10 @@ const CheckoutPage = () => {
       console.log('GST (18%):', taxes);
       console.log('Final amount being used:', data.amount || Math.round(total * 100));
 
-      // CRITICAL: Ensure we use the amount with GST
+     
       const finalAmount = data.amount || Math.round(total * 100);
 
-      // Initialize Razorpay payment
+     
       const options = {
         key: data.key || 'rzp_test_TKVlloXlym3fFS',
         amount: finalAmount, // This MUST include GST
@@ -212,7 +212,7 @@ const CheckoutPage = () => {
         
         handler: async function (response) {
           try {
-            // Verify payment on backend
+          
             const verifyResponse = await fetch(buildApiUrl('/payment/verify'), {
               method: 'POST',
               headers: {
@@ -260,7 +260,7 @@ const CheckoutPage = () => {
         }
       };
 
-      // Check if Razorpay is loaded
+     
       if (!window.Razorpay) {
         throw new Error('Razorpay SDK not loaded. Please refresh the page.');
       }

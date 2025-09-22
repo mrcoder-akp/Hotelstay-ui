@@ -33,7 +33,7 @@ const HotelDetailPage = () => {
       guests
     };
     dispatch(fetchHotelById({ id, params }));
-    // Reset availability check when dates change
+   
     setAvailabilityChecked(false);
   }, [dispatch, id, checkInDate, checkOutDate, guests]);
 
@@ -54,7 +54,7 @@ const HotelDetailPage = () => {
     setCheckingAvailability(true);
 
     try {
-      // Re-fetch hotel data with specific dates to get updated availability
+     
       const params = {
         checkin: checkInDate.toISOString(),
         checkout: checkOutDate.toISOString(),
@@ -63,7 +63,7 @@ const HotelDetailPage = () => {
       await dispatch(fetchHotelById({ id, params })).unwrap();
       setAvailabilityChecked(true);
 
-      // Check if any rooms are available
+    
       if (selectedHotel?.rooms?.some(room => room.availability > 0)) {
         toast.success('Rooms are available for your selected dates!');
       } else {
@@ -106,7 +106,7 @@ const HotelDetailPage = () => {
       guests
     };
 
-    // Set loading state for this specific room
+   
     setLoadingRoomId(room.roomId);
 
     try {
@@ -115,7 +115,7 @@ const HotelDetailPage = () => {
     } catch (error) {
       toast.error(error || 'Failed to add to cart');
     } finally {
-      // Clear loading state
+    
       setLoadingRoomId(null);
     }
   };

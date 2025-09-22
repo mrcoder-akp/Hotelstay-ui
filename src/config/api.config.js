@@ -1,11 +1,10 @@
-// API Configuration
-// Use environment variable if available, otherwise use localhost
+
 const getApiUrl = () => {
-  // Check for Vite environment variable
+  
   if (typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_URL) {
     return import.meta.env.VITE_API_URL;
   }
-  // Fallback to localhost
+  
   return 'https://hotelstay-ov1p.onrender.com';
 };
 
@@ -20,13 +19,12 @@ const API_CONFIG = {
   },
 };
 
-// Helper function to get auth header
 export const getAuthHeader = () => {
   const token = localStorage.getItem('token');
   return token ? { Authorization: `Bearer ${token}` } : {};
 };
 
-// Helper function to build API URL
+
 export const buildApiUrl = (endpoint) => {
   return `${API_CONFIG.API_URL}${endpoint}`;
 };

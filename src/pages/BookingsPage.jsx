@@ -43,10 +43,10 @@ const BookingsPage = () => {
       });
 
       if (response.data.success || Array.isArray(response.data)) {
-        // Handle both response formats - with or without success wrapper
+       
         const bookingsData = response.data.data || response.data;
 
-        // Transform the data to match the component's expected format
+       
         const transformedBookings = bookingsData.map(booking => ({
           id: booking.id || booking.bookingReference,
           bookingReference: booking.bookingReference,
