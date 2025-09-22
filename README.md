@@ -163,6 +163,149 @@ A modern, full-stack hotel booking platform built with React.js and Node.js, fea
 - **Logging** with Morgan in development
 - **Environment Configuration** with dotenv
 
+## 📸 Screenshots & User Interface
+
+### 1. Homepage - Hero Section
+![Homepage](./screenshot/page-1.png)
+The landing page features a stunning gradient hero section with:
+- Animated background with floating elements
+- Statistics display (2M+ happy guests, 50K+ hotels, 4.8★ rating)
+- Smart search bar with destination, check-in/out dates, and guest selection
+- "Why Choose TravelStay" section with key features
+- Popular destinations showcase with image overlays
+- Call-to-action section for starting the journey
+
+### 2. User Login Page
+![Login Page](./screenshot/page-2.png)
+Clean and modern login interface featuring:
+- Email and password input fields
+- "Remember me" checkbox and "Forgot password" link
+- Social login options (Google and Facebook)
+- Sign-up redirect for new users
+- Security badges displaying 100% secure, 24/7 support, and easy booking
+- Gradient background maintaining brand consistency
+
+### 3. User Registration Page
+![Registration Page](./screenshot/page-3.png)
+Comprehensive registration form with:
+- Personal information fields (first name, last name, email)
+- Phone number with country code
+- Secure password creation with visibility toggle
+- Terms and conditions acceptance
+- Privacy policy agreement checkbox
+- Social sign-up alternatives
+- Platform benefits display on the right side
+
+### 4. Hotel Search Results
+![Search Results](./screenshot/page-4.png)
+Advanced search results page showing:
+- Destination-based search with date and guest filters
+- Hotel cards with images, ratings, and amenities
+- Price per night display (₹4000 - ₹18000 range)
+- "View Details" buttons for each property
+- Filter options in sidebar (price range, rating, etc.)
+- Sort functionality
+- Hotels like The Taj Mahal Palace, The St. Regis Mumbai, and JW Marriott Juhu
+
+### 5. Hotel Detail Page
+![Hotel Details](./screenshot/page-5.png)
+Comprehensive hotel information including:
+- Large hero image of the property
+- Star rating and guest reviews
+- Detailed amenities list (WiFi, Spa, Gym, Pool, etc.)
+- Room selection with different categories
+- Price breakdown per room type
+- "Book Your Stay" section with date selection
+- Booking summary with total price calculation
+- Hotel policies and cancellation information
+
+### 6. Shopping Cart
+![Shopping Cart](./screenshot/page-6.png)
+User-friendly cart interface featuring:
+- Selected hotel and room details
+- Check-in/out dates display
+- Number of nights and guests
+- Room charges breakdown
+- GST (18%) calculation
+- Total amount with taxes (₹23,600)
+- Promo code application field
+- "Proceed to Checkout" button
+- Booking benefits listing
+
+### 7. Checkout - Guest Information
+![Checkout Page](./screenshot/page-7.png)
+Detailed checkout form with:
+- Guest information fields (name, email, phone)
+- Billing address section
+- Country/state selection
+- ZIP code entry
+- Special requests text area
+- Order summary sidebar showing subtotal and taxes
+- Total amount display (₹23,600)
+- Secure payment assurance via Razorpay
+
+### 8. Payment Gateway - Razorpay Integration
+![Payment Options](./screenshot/page-8.png)
+Secure payment interface offering:
+- Multiple payment methods (UPI, Cards, Netbanking, Wallet)
+- QR code for UPI payments
+- Recommended payment options
+- Price summary display
+- Secure transaction powered by Razorpay
+- Quick payment options for major banks
+- Mobile number verification for UPI
+
+### 9. UPI Payment Screen
+![UPI Payment](./screenshot/page-9.png)
+UPI payment verification showing:
+- UPI ID entry field
+- QR code scanning option
+- Connected payment apps display
+- Amount confirmation
+- "Verify and Pay" button
+- Security badges
+- Alternative payment method links
+
+### 10. Payment Success Confirmation
+![Payment Success](./screenshot/page-10.png)
+Booking confirmation screen displaying:
+- Success checkmark animation
+- Booking details summary
+- Payment confirmation with amount
+- Transaction date and time
+- UPI transaction ID
+- Razorpay reference for support
+- Auto-redirect notification
+
+### 11. My Bookings Dashboard
+![Bookings List](./screenshot/page-11.png)
+Comprehensive booking management with:
+- List view of all bookings
+- Status indicators (Confirmed, Pending, Cancelled)
+- Hotel thumbnails and names
+- Check-in/out dates for each booking
+- Room and guest information
+- Price display per booking
+- Action buttons (View Details, Cancel, Rebook)
+- Filter and sort options at the top
+- Mobile app promotion banner
+
+### 12. Booking Detail View
+![Booking Details](./screenshot/page-12.png)
+Detailed booking information showing:
+- Booking ID and confirmation status
+- Payment status (Paid)
+- Hotel information with rating
+- Complete address and contact details
+- Amenities available
+- Check-in/out dates and times
+- Room type and guest count
+- Price breakdown with GST
+- Important information and policies
+- Cancel booking option
+- "Book Another Hotel" CTA
+- Customer support contact
+
 ## 🛠️ Technology Stack
 
 ### Frontend
