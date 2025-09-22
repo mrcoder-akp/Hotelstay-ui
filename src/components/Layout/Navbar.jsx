@@ -186,7 +186,7 @@ const Navbar = () => {
         <div className={`fixed right-0 top-0 h-full w-72 bg-white shadow-2xl transform transition-transform ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`} onClick={(e) => e.stopPropagation()}>
-          <div className="p-6">
+          <div className="p-6 bg-white border border-gray-200">
             <div className="flex justify-between items-center mb-8">
               <span className="text-xl font-bold gradient-text">Menu</span>
               <button

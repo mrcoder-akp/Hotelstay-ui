@@ -501,7 +501,7 @@ const BookingDetailPage = () => {
               )}
 
               <button
-                onClick={() => navigate('/hotels')}
+                onClick={() => navigate('/search')}
                 className="w-full bg-primary-600 text-white py-3 rounded-xl hover:bg-primary-700 transition font-semibold"
               >
                 Book Another Hotel
